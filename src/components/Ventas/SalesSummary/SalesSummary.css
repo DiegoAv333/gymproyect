@@ -1,0 +1,58 @@
+.sales-view-container {
+    padding: 2rem;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.sales-view-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--sales-primary, #FFD700);
+    margin-bottom: 2rem;
+}
+
+.summary-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.summary-card {
+    background-color: var(--sales-sidebar-bg, #101010);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--sales-border, #2c2c2c);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.summary-card-title {
+    font-size: 1rem;
+    color: var(--sales-text-secondary, #888);
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+}
+
+.summary-card-metric {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--sales-primary, #FFD700);
+    margin: 0;
+}
+
+.summary-card-detail {
+    font-size: 1.1rem;
+    color: var(--sales-text, #e0e0e0);
+    margin-top: 1rem;
+}
+
+.summary-card-change {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.summary-card-change.positive { color: #4ade80; }
+.summary-card-change.negative { color: #f87171; }
