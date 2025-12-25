@@ -1,0 +1,230 @@
+/* Estilo general del contenedor Home */
+.Home{
+    width: 100%;
+    background-color: #000; /* Fondo oscuro para toda la página */
+    color: #fff;
+}
+
+.Home-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+/* Estilo genérico para las secciones */
+.Home-main > section {
+    padding: 5rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #222; /* Línea separadora sutil */
+}
+
+.Home-main > section:last-of-type {
+    border-bottom: none;
+}
+
+/* Sección de Bienvenida (Hero) */
+.Bienvenido {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Bienvenido h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem); /* Tamaño de fuente adaptable */
+    margin-bottom: 0.5rem;
+    font-weight: 900;
+}
+
+.Bienvenido h2 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.Bienvenido span,
+.porque-bienvenido h2 span {
+    color: #FFD700; /* Color dorado de acento */
+}
+
+.Bienvenido p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    color: #ccc;
+}
+
+.botones-bienvenida {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Estilo general para botones dentro del contenido principal */
+.Home-main button {
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Botón primario (resaltado) */
+.botones-bienvenida button:first-of-type,
+.cta-bienvenida button {
+    background-color: #FFD700;
+    color: #111;
+    border: 2px solid #FFD700;
+}
+
+.botones-bienvenida button:first-of-type:hover,
+.cta-bienvenida button:hover {
+    background-color: transparent;
+    color: #FFD700;
+}
+
+/* Botón secundario (borde) */
+.botones-bienvenida button:last-of-type {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.botones-bienvenida button:last-of-type:hover {
+    background-color: #fff;
+    color: #111;
+}
+
+/* Sección "¿Por qué GymProyect?" */
+.porque-bienvenido h2,
+.clases-bienvenida h2,
+.resenias-bienvenida h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.tarjetas-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.tarjeta-info {
+    background-color: #111;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #333;
+}
+
+.tarjeta-info h3 {
+    color: #FFD700;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+/* Sección "Nuestras Clases" */
+.clases-bienvenida > p {
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.tarjeta-clase {
+    background-color: #222;
+    height: 280px;
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    /* Idealmente, aquí añadirías imágenes de fondo para cada clase */
+}
+
+.tarjeta-clase:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.15);
+}
+
+.tarjeta-clase h3 {
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.clases-bienvenida button {
+    margin-top: 3rem;
+    background-color: transparent;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+}
+
+.clases-bienvenida button:hover {
+    background-color: #FFD700;
+    color: #111;
+}
+
+/* Sección de Reseñas */
+.resenias {
+    min-height: 150px;
+    border: 1px dashed #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    border-radius: 10px;
+}
+
+/* Sección CTA (Call to Action) */
+.cta-bienvenida h2 {
+    font-size: 2.2rem;
+    color: #FFD700;
+    margin-bottom: 1rem;
+}
+
+.cta-bienvenida p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .Home-main {
+        padding: 0 1rem; /* Reducir padding lateral en móviles */
+    }
+
+    .Home-main > section {
+        padding: 4rem 1rem; /* Reducir padding de las secciones */
+    }
+
+    .botones-bienvenida {
+        flex-direction: column; /* Apilar los botones verticalmente */
+        align-items: center;
+        width: 100%;
+        max-width: 350px; /* Limitar el ancho máximo de los botones */
+    }
+
+    .Home-main button {
+        width: 100%; /* Hacer que los botones ocupen todo el ancho disponible */
+    }
+
+    .porque-bienvenido h2,
+    .clases-bienvenida h2,
+    .resenias-bienvenida h2,
+    .cta-bienvenida h2 {
+        font-size: 2rem; /* Reducir tamaño de los títulos de sección */
+    }
+}
