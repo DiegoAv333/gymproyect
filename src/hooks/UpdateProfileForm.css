@@ -1,0 +1,108 @@
+/* src/components/Usuario/UpdateProfile/UpdateProfileForm.css */
+.update-profile-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #1e1e1e; /* Fondo mÃ¡s oscuro para el formulario */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #e0e0e0;
+}
+
+.update-profile-container h2 {
+    color: var(--GymProyect-yellow, #FFD700);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.update-profile-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.update-profile-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #ccc;
+}
+
+.update-profile-form input[type="text"],
+.update-profile-form input[type="email"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    font-size: 1rem;
+    box-sizing: border-box; /* Incluye el padding en el ancho */
+}
+
+.update-profile-form input[type="email"][disabled] {
+    background-color: #3a3a3a;
+    cursor: not-allowed;
+}
+
+.update-profile-form button[type="submit"] {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: var(--GymProyect-yellow, #FFD700);
+    color: #1a1a1a;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 1.5rem;
+}
+
+.update-profile-form button[type="submit"]:hover:not(:disabled) {
+    background-color: #e6c200; /* Amarillo ligeramente mÃ¡s oscuro al pasar el ratÃ³n */
+}
+
+.update-profile-form button[type="submit"]:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.success-message {
+    background-color: #28a745; /* Verde para Ã©xito */
+    color: white;
+    padding: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.error-message {
+    background-color: #dc3545; /* Rojo para error */
+    color: white;
+    padding: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.security-section {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #333;
+}
+
+.secondary-button {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.secondary-button:hover {
+    background-color: #555;
+}
