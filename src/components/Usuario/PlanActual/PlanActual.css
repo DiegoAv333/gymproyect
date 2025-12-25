@@ -1,0 +1,18 @@
+.plan-actual-container {
+    padding: 2rem;
+    background-color: #111;
+    border-radius: 8px;
+    border: 1px solid #FFD566;
+    margin: 2rem;
+}
+
+.plan-info, .no-plan {
+    background-color: #111;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.plan-info h3, .no-plan h3 {
+    margin-top: 0;
+}
