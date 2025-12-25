@@ -1,0 +1,379 @@
+/* --- ANIMACIONES --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Contenedor principal de la página de login */
+.login-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.PageLogin{
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #111; /* Un gris muy oscuro para el fondo del formulario */
+    color: #fff;
+    font-family: 'Arial', sans-serif; /* Aseguramos una fuente consistente */
+}
+
+/* --- SECCIÓN IZQUIERDA: INFORMACIÓN --- */
+.info-login{
+    flex: 1;
+    background-color: #000;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeIn 0.8s ease-out forwards;
+    /* Opcional: Añadir una imagen de fondo sutil */
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('path/to/your/image.jpg'); */
+    /* background-size: cover; */
+    /* background-position: center; */
+}
+
+.info-login-content {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.info-login-content h1 {
+    font-size: 4rem;
+    color: #FFD700; /* Dorado */
+    margin-bottom: 1rem;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 2px;
+    /* Estilo para el título principal GymProyect */
+}
+
+
+.info-login h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.5;
+    color: #ccc;
+    font-weight: 400;
+    text-align: center;
+}
+
+.beneficios-Login {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.beneficios-Login li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.beneficios-Login li:hover {
+    transform: translateX(5px);
+}
+
+.beneficios-Login h3 {
+    color: #FFD700;
+    margin-right: 1rem;
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.beneficios-Login p {
+    margin: 0;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+/* --- SECCIÓN DERECHA: FORMULARIO --- */
+.panel-Login {
+    position: relative; /* Necesario para el posicionamiento absoluto del botón de volver */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    animation: fadeIn 0.8s ease-out 0.2s forwards;
+    opacity: 0; /* Necesario para que la animación de delay funcione */
+    box-sizing: border-box;
+}
+
+.back-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.back-button:hover {
+    color: #FFD700;
+}
+
+.back-button svg {
+    font-size: 1.2rem;
+}
+
+.navigation-Login{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.navigation-Login button {
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem; 
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #444; /* Línea gris para estado inactivo */
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    color: #fff;
+    padding-bottom: 0.5rem; /* Espacio para la línea */
+    white-space: nowrap; /* Evita que el texto se divida en dos líneas */
+}
+
+.navigation-Login button:hover {
+    color: #FFD700;
+    border-bottom-color: #FFD700;
+}
+
+.navigation-Login button.active {
+    color: #FFD700;
+    border-bottom-color: #FFD700; /* Línea dorada para estado activo */
+}
+
+.Login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.Login h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #FFD700;
+}
+
+.Login p {
+    color: #aaa;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.password-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.Login .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.Login label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #ccc;
+    font-size: 1rem;
+}
+
+.Login input[type="email"],
+.Login input[type="password"],
+.Login input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #fff;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+.Login input[type="email"]:focus,
+.Login input[type="password"]:focus,
+.Login input[type="text"]:focus {
+    outline: none;
+    border-color: #FFD700;
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+}
+
+.Login button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.Login .password-input-container input {
+    padding-right: 3.5rem !important; /* Aumenta el padding para que el ícono no se superponga */
+}
+
+.Login button[id="show-password"] {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    cursor: pointer;
+    color: #FFD700;
+    font-size: 1.5rem; /* Aumenta el tamaño del ícono */
+    border: none;
+    padding: 0;
+    display: flex; /* Centra el ícono dentro del botón */
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem; /* Ancho del botón */
+    height: 1.5rem; /* Altura del botón */
+}
+
+.Login button[type="submit"] {
+    background-color: #FFD700;
+    color: #111;
+    border: 2px solid #FFD700;
+}
+
+.Login button[type="submit"]:hover {
+    background-color: transparent;
+    color: #FFD700;
+}
+
+/* --- Social Login Buttons --- */
+.Login .social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2.5rem; /* Espacio después del separador */
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-align: center;
+}
+
+/* Separador con la letra "O" */
+.Login .social-login::before {
+    content: 'O';
+    position: absolute;
+    top: -2.2rem; /* Posición sobre los botones */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #111; /* Coincide con el fondo de la sección */
+    color: #888;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.Login .social-login::after {
+    content: '';
+    position: absolute;
+    top: -1.6rem; /* Alineado con el centro de la "O" */
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #444;
+    z-index: -1; /* Detrás de la "O" */
+}
+.Login .social-login button {
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem; /* Espacio entre icono y texto */
+    background-color: transparent;
+    border: 1px solid #555;
+    padding: 12px;
+    text-transform: none; /* Anulamos el estilo general de mayúsculas */
+}
+
+.Login .social-login button:hover {
+    border-color: #FFD700;
+    color: #FFD700;
+}
+
+.Login .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.Login .options label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.Login .options a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.Login .options a:hover {
+    text-decoration: underline;
+}
+
+/* --- ESTILOS RESPONSIVOS --- */
+@media (max-width: 992px) {
+    /* Ocultamos la sección de info en móviles para dar prioridad al formulario */
+    .info-login {
+        display: none;
+    }
+
+    .panel-Login {
+        width: 100%;
+        max-width: 100%;
+        padding: 2rem 1.5rem; /* Reducimos padding para más espacio en tablets y móviles */
+        animation: none; /* Desactivamos la animación de entrada para una carga más rápida */
+        opacity: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .panel-Login {
+        padding: 2rem 1rem; /* Aún menos padding para pantallas muy pequeñas */
+    }
+
+    .Login .options {
+        flex-direction: column; /* Apilamos las opciones de "Recordarme" y "Olvidé contraseña" */
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
