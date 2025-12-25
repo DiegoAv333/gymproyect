@@ -1,0 +1,20 @@
+.tienda-container {
+  padding: 20px;
+  color: white;
+}
+
+.filters {
+  margin-bottom: 20px;
+  color: black;
+}
+
+.filters label {
+  margin-right: 10px;
+  color: white;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
