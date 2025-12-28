@@ -64,7 +64,7 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local.
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone https://github.com/TU_USUARIO/gymproyect.git
+    git clone https://github.com/DiegoAv333/gymproyect.git
     cd gymproyect
     ```
 
